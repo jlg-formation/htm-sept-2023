@@ -1,5 +1,5 @@
 svg {
-  background: #eee;
+  border: 0.1em solid black;
   width: 50em;
   height: 30em;
 }
@@ -7,4 +7,5 @@ svg {
 circle {
   fill: transparent;
   stroke: black;
+  stroke-width: 0.02em;
 }
