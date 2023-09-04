@@ -1,3 +1,9 @@
+svg {
+  background: #eee;
+  width: 50em;
+  height: 30em;
+}
+
 circle {
   fill: transparent;
   stroke: black;
