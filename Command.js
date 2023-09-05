@@ -1,3 +1,5 @@
+import { $ } from "./misc.js";
+
 export class Command {
   constructor() {
     this.config = {
@@ -20,33 +22,27 @@ export class Command {
   }
 
   render() {
-    document.querySelector("div.command label.samples span span").innerHTML =
-      this.config.samples;
-    document.querySelector(
-      "div.command label.multiplicationFactor span span"
-    ).innerHTML = this.config.multiplicationFactor;
+    $("div.command label.samples span span").innerHTML = this.config.samples;
+    $("div.command label.multiplicationFactor span span").innerHTML =
+      this.config.multiplicationFactor;
 
-    document.querySelector("div.command label.samples input").value =
-      this.config.samples;
-    document.querySelector(
-      "div.command label.multiplicationFactor input"
-    ).value = this.config.multiplicationFactor;
+    $("div.command label.samples input").value = this.config.samples;
+    $("div.command label.multiplicationFactor input").value =
+      this.config.multiplicationFactor;
   }
 
   setActions() {
     document
       .querySelector("div.command label.samples input")
       .addEventListener("input", () => {
-        this.config.samples = document.querySelector(
-          "div.command label.samples input"
-        ).value;
+        this.config.samples = $("div.command label.samples input").value;
         this.render();
         this.callback(this.config);
       });
     document
       .querySelector("div.command label.multiplicationFactor input")
       .addEventListener("input", () => {
-        this.config.multiplicationFactor = document.querySelector(
+        this.config.multiplicationFactor = $(
           "div.command label.multiplicationFactor input"
         ).value;
         this.render();

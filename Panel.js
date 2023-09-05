@@ -1,5 +1,6 @@
 import { getAngleFromIndex, getPointFromAngle } from "./math.js";
 import { SVG_NS, r } from "./constants.js";
+import { $ } from "./misc.js";
 
 export class Panel {
   constructor() {}
@@ -9,14 +10,14 @@ export class Panel {
   }
 
   clear() {
-    document.querySelector("svg g.samples").innerHTML = "";
-    document.querySelector("svg g.lines").innerHTML = "";
+    $("svg g.samples").innerHTML = "";
+    $("svg g.lines").innerHTML = "";
   }
 
   draw() {
     this.clear();
 
-    const gSamplesElt = document.querySelector("svg g.samples");
+    const gSamplesElt = $("svg g.samples");
 
     for (let i = 0; i < this.config.samples; i++) {
       const circleElt = document.createElementNS(SVG_NS, "circle");
@@ -31,7 +32,7 @@ export class Panel {
       gSamplesElt.appendChild(circleElt);
     }
 
-    const gLinesElt = document.querySelector("svg g.lines");
+    const gLinesElt = $("svg g.lines");
 
     for (let i = 0; i < this.config.samples; i++) {
       const lineElt = document.createElementNS(SVG_NS, "line");
