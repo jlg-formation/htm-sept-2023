@@ -1,12 +1,5 @@
-import {
-  samples,
-  SVG_NS,
-  multiplicationFactor,
-  r0,
-  r,
-  cx0,
-  cy0,
-} from "./constants.js";
+import { SVG_NS, multiplicationFactor, r, samples } from "./constants.js";
+import { getAngleFromIndex, getPointFromAngle } from "./math.js";
 
 const gSamplesElt = document.querySelector("svg g.samples");
 console.log("gSamplesElt: ", gSamplesElt);
@@ -15,12 +8,11 @@ for (let i = 0; i < samples; i++) {
   const circleElt = document.createElementNS(SVG_NS, "circle");
   console.log("circleElt: %O", circleElt);
 
-  const angle = (i * (2 * Math.PI)) / samples;
-  const cx = cx0 + r0 * Math.cos(angle);
-  const cy = cy0 + r0 * Math.sin(angle);
+  const angle = getAngleFromIndex(i, samples);
+  const p = getPointFromAngle(angle);
 
-  circleElt.setAttribute("cx", cx);
-  circleElt.setAttribute("cy", cy);
+  circleElt.setAttribute("cx", p.x);
+  circleElt.setAttribute("cy", p.y);
   circleElt.setAttribute("r", r);
 
   gSamplesElt.appendChild(circleElt);
@@ -32,18 +24,16 @@ console.log("gLinesElt: ", gLinesElt);
 for (let i = 0; i < samples; i++) {
   const lineElt = document.createElementNS(SVG_NS, "line");
 
-  const angle1 = (i * (2 * Math.PI)) / samples;
-  const x1 = cx0 + r0 * Math.cos(angle1);
-  const y1 = cy0 + r0 * Math.sin(angle1);
+  const angle1 = getAngleFromIndex(i, samples);
+  const p1 = getPointFromAngle(angle1);
 
-  const angle2 = angle1 * multiplicationFactor;
-  const x2 = cx0 + r0 * Math.cos(angle2);
-  const y2 = cy0 + r0 * Math.sin(angle2);
+  const angle2 = getAngleFromIndex(i * multiplicationFactor, samples);
+  const p2 = getPointFromAngle(angle2);
 
-  lineElt.setAttribute("x1", x1);
-  lineElt.setAttribute("y1", y1);
-  lineElt.setAttribute("x2", x2);
-  lineElt.setAttribute("y2", y2);
+  lineElt.setAttribute("x1", p1.x);
+  lineElt.setAttribute("y1", p1.y);
+  lineElt.setAttribute("x2", p2.x);
+  lineElt.setAttribute("y2", p2.y);
 
   gLinesElt.appendChild(lineElt);
 }
