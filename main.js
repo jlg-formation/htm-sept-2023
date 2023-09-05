@@ -1,12 +1,12 @@
-const SVG_NS = "http://www.w3.org/2000/svg";
-const r = 1;
-
-const cx0 = 50;
-const cy0 = 50;
-const r0 = 45;
-
-const samples = 100;
-const multiplicationFactor = 98;
+import {
+  samples,
+  SVG_NS,
+  multiplicationFactor,
+  r0,
+  r,
+  cx0,
+  cy0,
+} from "./constants.js";
 
 const gSamplesElt = document.querySelector("svg g.samples");
 console.log("gSamplesElt: ", gSamplesElt);
