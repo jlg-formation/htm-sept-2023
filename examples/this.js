@@ -35,3 +35,5 @@ tutu.call("truc bidule", 1, 3, 67);
 const tutu4 = () => {
   console.log("this: ", this);
 };
+
+new toto();
