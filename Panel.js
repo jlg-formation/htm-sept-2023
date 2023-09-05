@@ -5,7 +5,7 @@ export class Panel {
   constructor() {}
 
   setConfig(config) {
-    this.config = config;
+    this.config = { ...config };
   }
 
   clear() {

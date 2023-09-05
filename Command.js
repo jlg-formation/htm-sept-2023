@@ -10,7 +10,7 @@ export class Command {
   }
 
   setConfig(config) {
-    this.config = config;
+    this.config = { ...config };
     this.render();
     this.callback(this.config);
   }

@@ -13,5 +13,6 @@ panel.draw();
 const command = new Command();
 command.setConfig(config);
 command.onUpdate((newConfig) => {
+  panel.setConfig(newConfig);
   panel.draw();
 });
