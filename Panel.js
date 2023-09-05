@@ -17,11 +17,9 @@ export class Panel {
     this.clear();
 
     const gSamplesElt = document.querySelector("svg g.samples");
-    console.log("gSamplesElt: ", gSamplesElt);
 
     for (let i = 0; i < this.config.samples; i++) {
       const circleElt = document.createElementNS(SVG_NS, "circle");
-      console.log("circleElt: %O", circleElt);
 
       const angle = getAngleFromIndex(i, this.config.samples);
       const p = getPointFromAngle(angle);
@@ -34,7 +32,6 @@ export class Panel {
     }
 
     const gLinesElt = document.querySelector("svg g.lines");
-    console.log("gLinesElt: ", gLinesElt);
 
     for (let i = 0; i < this.config.samples; i++) {
       const lineElt = document.createElementNS(SVG_NS, "line");
