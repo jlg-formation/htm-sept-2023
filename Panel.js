@@ -8,7 +8,14 @@ export class Panel {
     this.config = config;
   }
 
+  clear() {
+    document.querySelector("svg g.samples").innerHTML = "";
+    document.querySelector("svg g.lines").innerHTML = "";
+  }
+
   draw() {
+    this.clear();
+
     const gSamplesElt = document.querySelector("svg g.samples");
     console.log("gSamplesElt: ", gSamplesElt);
 
