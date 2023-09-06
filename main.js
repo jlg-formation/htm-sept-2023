@@ -1,5 +1,6 @@
 import { Panel } from "./Panel.js";
 import { Command } from "./Command.js";
+import { Sidesheet } from "./Sidesheet.js";
 
 const config = {
   samples: 87,
@@ -16,3 +17,5 @@ command.onUpdate((newConfig) => {
   panel.setConfig(newConfig);
   panel.draw();
 });
+
+new Sidesheet();
