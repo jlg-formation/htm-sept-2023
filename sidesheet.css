@@ -1,57 +1,79 @@
-div.sidesheet {
-  position: absolute;
-  top: 0;
-  left: 0;
+@media screen and (max-width: 600px) {
+  div.sidesheet {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  div.sidesheet div.button {
+    position: relative;
+    z-index: 1;
+  }
+
+  div.sidesheet div.button button {
+    margin: 1em;
+    background: #eee;
+    border: none;
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 0.2em 0.2em #bbb;
+  }
+
+  div.sidesheet div.button button:hover {
+    background: #ddd;
+  }
+
+  div.sidesheet div.button button:active {
+    background: #ccc;
+  }
+
+  div.sidesheet aside.panel {
+    background-color: #fff;
+    width: 20em;
+    position: fixed;
+    left: -20.5em;
+    top: 0;
+    transition: all 100ms;
+    height: 100vh;
+
+    border-radius: 0 0.5em 0.5em 0;
+    box-shadow: 0.01em 0em 0.3em 0.1em #444;
+
+    padding: 0.5em;
+    overflow-y: auto;
+
+    padding-bottom: 5em;
+  }
+
+  div.sidesheet aside.panel.open {
+    left: 0;
+  }
+
+  div.sidesheet aside.panel::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-div.sidesheet div.button {
-  position: relative;
-  z-index: 1;
-}
+@media screen and (min-width: 600px) {
+  div.sidesheet div.button {
+    display: none;
+  }
 
-div.sidesheet div.button button {
-  margin: 1em;
-  background: #eee;
-  border: none;
-  width: 3em;
-  height: 3em;
-  border-radius: 100%;
-  cursor: pointer;
-  box-shadow: 0 0 0.2em 0.2em #bbb;
-}
+  div.sidesheet aside.panel {
+    background-color: #fff;
+    border-right: 0.1em solid black;
+    width: 20em;
+    height: 100vh;
+    padding: 0.5em;
+    overflow-y: auto;
+    padding-bottom: 5em;
+  }
 
-div.sidesheet div.button button:hover {
-  background: #ddd;
-}
-
-div.sidesheet div.button button:active {
-  background: #ccc;
-}
-
-div.sidesheet aside.panel {
-  background-color: #fff;
-  width: 20em;
-  position: fixed;
-  left: -20.5em;
-  top: 0;
-  transition: all 100ms;
-  height: 100vh;
-
-  border-radius: 0 0.5em 0.5em 0;
-  box-shadow: 0.01em 0em 0.3em 0.1em #444;
-
-  padding: 0.5em;
-  overflow-y: auto;
-
-  padding-bottom: 5em;
-}
-
-div.sidesheet aside.panel.open {
-  left: 0;
-}
-
-div.sidesheet aside.panel::-webkit-scrollbar {
-  display: none;
+  div.sidesheet aside.panel::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media print {
