@@ -16,3 +16,7 @@ div.sidesheet div.button button {
 div.sidesheet div.button button:hover {
   background: #ddd;
 }
+
+div.sidesheet div.button button:active {
+  background: #ccc;
+}
