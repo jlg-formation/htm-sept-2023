@@ -50,8 +50,6 @@ div.command {
   display: flex;
   flex-flow: column;
   gap: 1em;
-  border: 0.1em solid black;
-  padding: 0.5em;
 }
 
 div.command label {
