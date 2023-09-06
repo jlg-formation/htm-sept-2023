@@ -23,7 +23,6 @@ main {
 svg {
   border: 0.1em solid black;
   width: 100%;
-  max-width: 50em;
   max-height: 30em;
   display: inline;
 }
