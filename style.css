@@ -60,3 +60,21 @@ div.command label {
 h1 {
   text-align: center;
 }
+
+div.list {
+  border: 0.1em solid #eee;
+  border-radius: 0.5em;
+}
+
+div.item {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0.5em;
+}
+
+div.item:nth-child(even) {
+  background: #eee;
+}
