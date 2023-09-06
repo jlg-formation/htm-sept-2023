@@ -1,0 +1,18 @@
+div.sidesheet {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+div.sidesheet div.button button {
+  background: #eee;
+  border: none;
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+div.sidesheet div.button button:hover {
+  background: #ddd;
+}
