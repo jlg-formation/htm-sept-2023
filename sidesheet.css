@@ -53,3 +53,9 @@ div.sidesheet aside.panel.open {
 div.sidesheet aside.panel::-webkit-scrollbar {
   display: none;
 }
+
+@media print {
+  div.sidesheet {
+    display: none;
+  }
+}
