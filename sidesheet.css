@@ -28,7 +28,7 @@ div.sidesheet div.button button:active {
   background: #ccc;
 }
 
-div.sidesheet div.panel {
+div.sidesheet aside.panel {
   background-color: #fff;
   width: 20em;
   position: fixed;
@@ -46,10 +46,10 @@ div.sidesheet div.panel {
   padding-bottom: 5em;
 }
 
-div.sidesheet div.panel.open {
+div.sidesheet aside.panel.open {
   left: 0;
 }
 
-div.sidesheet div.panel::-webkit-scrollbar {
+div.sidesheet aside.panel::-webkit-scrollbar {
   display: none;
 }

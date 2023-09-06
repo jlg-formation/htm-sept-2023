@@ -11,7 +11,7 @@ export class Sidesheet {
     const iElt = $("div.sidesheet div.button button i");
     iElt.className =
       "fa-solid " + (this.isOpen ? "fa-times" : "fa-angle-right");
-    const panelElt = $("div.sidesheet div.panel");
+    const panelElt = $("div.sidesheet aside.panel");
     console.log("panelElt: ", panelElt);
     panelElt.className = "panel " + (this.isOpen ? "open" : "");
   }
