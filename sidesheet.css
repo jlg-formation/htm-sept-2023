@@ -4,6 +4,11 @@ div.sidesheet {
   left: 0;
 }
 
+div.sidesheet div.button {
+  position: relative;
+  z-index: 1;
+}
+
 div.sidesheet div.button button {
   margin: 1em;
   background: #eee;
@@ -25,9 +30,11 @@ div.sidesheet div.button button:active {
 div.sidesheet div.panel {
   background-color: #eee;
   width: 20em;
-  position: relative;
+  position: fixed;
   left: -20em;
+  top: 0;
   transition: all 100ms;
+  height: 100vh;
 }
 
 div.sidesheet div.panel.open {
